@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(../images/bg.jpg);
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.header {
+	width: 100%;
+	height: 40px;
+	background-color: rgb(78, 205, 196);
+}
+
+
+.banner {
+	position: relative;
+	overflow: auto;
+}
+
+.banner li {
+	list-style: none;
+}
+
+.banner ul li {
+	float: left;
+}
+
+
+.contain {
+	width: 1000px;
+	height: auto;
+	margin: 0px auto;
+}
+
+.contain_child {
+	width: 240px;
+	float: left;
+	padding: 0;
+	margin: 10px;
+	border: 1px solid #eee;
+	background: #FFF;
+}
+
+.contain_child:hover {
+	border: 1px solid #2cc;
+}
+
+.contain_child_img {
+	margin: 10px 10px 0px 10px;
+}
+
+.ding {
+	margin-left: 30%;
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-image: url("http://static.youku.com/v/img/fns.png");
+	background-position-x: 0px;
+	background-position-y: 0px;
+}
+
+.ding_num {
+	width: 40px;
+	color: #999;
+	margin-left: 28%;
+	clear: both;
+	float: left;
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+}
+
+.cai_num {
+	width: 40px;
+	color: #999;
+	margin-left: 18px;
+	float: left;
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+}
+
+.cai {
+	float: left;
+	margin-left: 30px;
+	width: 30px;
+	height: 30px;
+	background-image: url("http://static.youku.com/v/img/fns.png");
+	background-position-x: 0px;
+	background-position-y: -30px;
+}
+
+.contein_child_title {
+	margin-left: 10px;
+	margin-top: 0px;
+}
+
+.contein_child_title span {
+	font-family: "Microsoft YaHei UI", "Microsoft YaHei", SimSun, "Segoe UI",
+		Tahoma, Helvetica, Sans-Serif;
+	font-size: 19px;
+	color: #777;
+}
+
+.contein_child_p {
+	font-size: 12px;
+	margin: 8px 10px 10px 10px;
+	text-indent: 2em;
+}
+
+.author {
+	clear: left;
+	margin: 10px;
+	border-top: 1px solid #eee;
+	padding: 0px;
+}
+
+.author span {
+	float: left;
+	margin: 8px 0px 8px 0px;
+	font-size: 12px;
+}
+
+.author div {
+	background-image:
+		url("http://www1.pconline.com.cn/sybl2013/images/sprite.png");
+	background-position-x: 0px;
+	background-position-y: -452px;
+	height: 20px;
+	float: right;
+	padding-left: 20px;
+}
+
+.loading {
+	font: 14px;
+	font-weight: bold;
+	width: 200px;
+	clear: both;
+	margin: 0px auto;
+}

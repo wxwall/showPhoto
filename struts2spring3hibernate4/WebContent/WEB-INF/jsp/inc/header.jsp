@@ -1,0 +1,2 @@
+<%@page import="cn.javass.common.Constants"%><%request.setAttribute("ctx", request.getContextPath());%><html lang='zh-CN' xml:lang='zh-CN' xmlns='http://www.w3.org/1999/xhtml'>
+<head><%@include file="taglib.jsp" %><%@include file="import.jsp" %>
