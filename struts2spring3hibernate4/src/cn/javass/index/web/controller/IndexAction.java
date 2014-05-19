@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import cn.javass.common.pagination.Page;
 import cn.javass.index.model.ProductModel;
 import cn.javass.index.service.IndexService;
 
@@ -31,7 +32,6 @@ public class IndexAction {
 	
 	@RequestMapping(value = "/index")
     public String index(HttpServletRequest request){
-		System.out.println("hello index");
         return "index";
     }
 	
@@ -44,15 +44,20 @@ public class IndexAction {
 	 */
 	@RequestMapping(value = "/loading")
 	public String loading(HttpServletRequest request,HttpServletResponse resp){
+		logger.debug("loading method star");
+		Integer pn;
+		try {
+			pn = Integer.parseInt(request.getParameter("pn"));
+		} catch(Exception e){
+			pn = 0;
+		}
 		PrintWriter out = null;
-		System.out.println("hello loding");
-		List<ProductModel> list = indexService.listAll();
-		ProductModel model = indexService.get(1);
-		JSONArray json = JSONArray.fromObject(list);
-		logger.info("查到的数据：" + json.toString());
+		Page page = indexService.listAll(pn);
+		JSONArray pageJson = JSONArray.fromObject(page);
+		logger.info("查到的数据：" + pageJson.toString());
 		try {
 			out = resp.getWriter();
-			out.print(json.toString());
+			out.print(pageJson.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.info("IO异常：" + e);
@@ -60,6 +65,7 @@ public class IndexAction {
 			out.flush();
 			out.close();
 		}
+		logger.debug("loading method end ");
 		return null;
 	}
 }

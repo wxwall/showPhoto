@@ -53,12 +53,22 @@ a:active {
 }
 
 .contain_child {
-	width: 240px;
+	width: 270px;
 	float: left;
 	padding: 0;
 	margin: 10px;
 	border: 1px solid #eee;
 	background: #FFF;
+	position: relative;
+}
+
+.Imgtype{
+	width:36px;
+	height: 36px;
+	font-weight:bold;
+	position: absolute;
+	left:240px;
+	top:-15px;	
 }
 
 .contain_child:hover {
